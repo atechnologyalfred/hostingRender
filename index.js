@@ -21,13 +21,18 @@ db.query("SELECT * FROM credentials", (err, res) =>{
         console.log("Entered error", err.stack)
     } else {
         result = res.rows
-       
+        
     }
 });
 app.get("/", (req, res) =>{
+   
     res.render("index.ejs");
     console.log(result);
 });
+
+app.get("/result", (req, res) =>{
+    res.render("result.ejs", {result});
+})
 
 app.listen(port, () =>{
     console.log(`Server is running on port ${port}`);

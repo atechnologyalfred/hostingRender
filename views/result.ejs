@@ -1,0 +1,12 @@
+
+<h1>Below is a list of registered users </h1>
+
+<div class = "list">
+    <% locals.result.forEach(result => {  %>
+        <div>
+        <p>your email is: <%= result.email %></p>
+        <p>your wallet address is <%= result.wallet_address %></p>
+        </div>
+    <% }) %>
+ 
+</div>
